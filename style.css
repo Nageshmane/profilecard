@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #6464ff, #c96ec9); */
+    background: url('https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1200&fit=crop&crop=faces') center center/cover no-repeat;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(1, 1, 1, 0.1);
+    border-radius: 20px;
+    transition: all 0.5s;
+    border: 0.1px solid rgba(23, 23, 23, 0.02);
+    transition: all 0.5s;
+    box-shadow: 0px 0px 26px 4px rgba(23, 23, 23, 0.4);
+}
+
+.card:hover {
+    height: 350px;
+}
+
+.card:hover .image {
+    width: 120%;
+    height: 120%;
+}
+
+.image {
+    position: absolute;
+    top: -50px;
+    transform: translateX(100%);
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.1s;
+    box-shadow: inset -11px -11px 22px #bcbcbc,
+        inset 11px 11px 22px #ffffff;
+    ;
+    overflow: hidden;
+    z-index: 1999;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.2)
+}
+
+.card:hover .image {
+    width: 130px;
+    height: 130px;
+    transform: translateX(70%);
+}
+
+.buttons {
+    display: none;
+}
+
+.buttons ion-icon {
+    scale: 1.5;
+    padding: 5%;
+    cursor: pointer;
+    transition: 0.4s;
+    color: black;
+}
+
+.buttons ion-icon:hover {
+    color: white;
+    scale: 1.6;
+}
+
+.skills {
+    display: none;
+    transition: 0.5s;
+    text-align: start;
+    padding: 0% 5%;
+    transition: all 0.8s;
+    padding-bottom: 5%;
+}
+
+.skills h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.skills div {
+    display: grid;
+    grid-template-columns: (0.5fr, 2);
+    grid-template-columns: fit-content(100%) fit-content(50%);
+    text-align: center;
+    grid-gap: 5px;
+    transition: all 0.8s;
+
+}
+
+.skills div span {
+    transition: all 0.8s;
+    min-width: 30%;
+    background: rgba(1, 1, 1, 0.1);
+    color: white;
+    padding: 5px;
+}
+
+.card:hover .skills {
+    display: block;
+}
+
+.card:hover .buttons {
+    display: block;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.content h2 {
+    color: white;
+}
+
+.content h2 span {
+    color: black;
+    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+}
+
+.js-tilt-glare {
+    border-radius: 20px;
+}
+
+.data-tilt {
+    z-index: -1
+}
